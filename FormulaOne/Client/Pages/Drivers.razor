@@ -1,0 +1,38 @@
+@page "/drivers"
+
+<PageTitle>Drivers</PageTitle>
+<h1>Welcome to the Drivers Section</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Racing Number
+            </th>
+            <th>
+                Team
+            </th>
+            <th>
+                Manage
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in _drivers)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.RacingNb</td>
+                <td>@item.Team</td>
+
+            </tr>
+        }
+    </tbody>
+</table>
