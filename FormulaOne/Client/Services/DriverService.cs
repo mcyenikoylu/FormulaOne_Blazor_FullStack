@@ -44,8 +44,8 @@ public class DriverService : IDriverService
     {
         try
         {
-            var response = await _httpClient.GetStreamAsync("api/drivers");
-            var drivers = await JsonSerializer.DeserializeAsync<IEnumerable<Driver>>(response, new JsonSerializerOptions
+            var apiresponse = await _httpClient.GetStreamAsync("api/drivers");
+            var drivers = await JsonSerializer.DeserializeAsync<IEnumerable<Driver>>(apiresponse, new JsonSerializerOptions
             {
                 PropertyNameCaseInsensitive = true
             });
