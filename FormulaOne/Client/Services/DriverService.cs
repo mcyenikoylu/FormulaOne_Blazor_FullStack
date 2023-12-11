@@ -33,10 +33,10 @@ public class DriverService : IDriverService
             }
             return null;
         }
-        catch (System.Exception ex)
+        catch (Exception ex)
         {
             Console.WriteLine($"Error: {ex.Message}");
-            throw;
+            throw ex;
         }
     }
 
